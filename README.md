@@ -33,7 +33,7 @@ Create a `.env` file from the template:
 ```bash
 cp .env.example .env
 ```
-Set `VITE_API_URL` to your backend host (defaults to `http://localhost:8000`).
+Set `VITE_API_URL` to your backend host (defaults to `https://khushirnn-backend.onrender.com`).
 
 ### 3. Start Development Server
 ```bash
@@ -49,11 +49,7 @@ The optimized static bundle will be generated in `dist/`.
 
 ---
 
-## ☁️ Deployment
+## 👤 Author
 
-The built `dist/` directory can be deployed to:
-- **Render** (Static Site)
-- **Vercel**: `vercel --prod`
-- **Netlify**: `netlify deploy --prod --dir=dist`
-- **GitHub Pages**
+- **Lucky Pawar** ([@lucky-KRMU](https://github.com/lucky-KRMU))
 
