@@ -95,7 +95,23 @@ export default function ConfigModal({
           </div>
 
           {/* Quick presets */}
-          <div style={{ display: 'flex', gap: '8px', marginBottom: '1.5rem' }}>
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+            <button
+              type="button"
+              onClick={() => setUrlInput('https://khushirnn-backend.onrender.com')}
+              style={{
+                fontSize: '0.75rem',
+                padding: '4px 10px',
+                borderRadius: 'var(--radius-full)',
+                border: '1px solid var(--accent-gold-border)',
+                background: 'var(--accent-gold-subtle)',
+                color: 'var(--accent-gold)',
+                cursor: 'pointer',
+                fontWeight: 500,
+              }}
+            >
+              ☁ Render API (Live)
+            </button>
             <button
               type="button"
               onClick={() => setUrlInput('http://localhost:8000')}
@@ -109,7 +125,7 @@ export default function ConfigModal({
                 cursor: 'pointer',
               }}
             >
-              Default Localhost (8000)
+              Localhost (8000)
             </button>
             <button
               type="button"

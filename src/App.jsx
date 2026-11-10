@@ -5,7 +5,7 @@ import ResultCard from './components/ResultCard';
 import HistoryList from './components/HistoryList';
 import ConfigModal from './components/ConfigModal';
 
-const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'https://khushirnn-backend.onrender.com';
 
 export default function App() {
   // Theme state: defaults to dark if user prefers dark or previous setting
@@ -15,9 +15,15 @@ export default function App() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
-  // API URL state
+  // API URL state (defaults to Render production API)
   const [apiUrl, setApiUrl] = useState(() => {
-    return localStorage.getItem('khushi_api_url') || DEFAULT_API_URL;
+    const saved = localStorage.getItem('khushi_api_url');
+    // If previously saved as localhost or empty, automatically upgrade to production Render URL
+    if (!saved || saved === 'http://localhost:8000') {
+      localStorage.setItem('khushi_api_url', DEFAULT_API_URL);
+      return DEFAULT_API_URL;
+    }
+    return saved;
   });
 
   // Backend status
