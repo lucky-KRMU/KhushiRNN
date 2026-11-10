@@ -104,7 +104,7 @@ Score: ${result.score}`;
             Confidence Level: <strong style={{ color: 'var(--text-primary)' }}>{confidencePercent}%</strong>
           </span>
           <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--text-tertiary)' }}>
-            Sigmoid output $z$: {result.score.toFixed(4)}
+            Sigmoid output (z): {result.score.toFixed(4)}
           </span>
         </div>
 

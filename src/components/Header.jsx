@@ -38,11 +38,49 @@ export default function Header({
             alignItems: 'center',
             justifyContent: 'center',
             color: 'var(--accent-gold)',
-            fontSize: '1.4rem',
-            fontFamily: 'var(--font-serif-display)',
             boxShadow: 'var(--shadow-sm)',
+            flexShrink: 0,
           }}>
-            ✦
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="KhushiRNN Neural Logo"
+            >
+              {/* Recurrent neural cycle arcs */}
+              <path
+                d="M12 3a9 9 0 0 1 9 9c0 4.2-2.9 7.7-6.9 8.7"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+              <path
+                d="M12 21a9 9 0 0 1-9-9c0-4.2 2.9-7.7 6.9-8.7"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+              {/* Directional arrow heads representing recurrent feedback loop */}
+              <polyline
+                points="15.5 22 14.1 19.8 16.5 18.9"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <polyline
+                points="8.5 2 9.9 4.2 7.5 5.1"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Central neural core */}
+              <circle cx="12" cy="12" r="3.2" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.6" />
+              <circle cx="12" cy="12" r="1.3" fill="currentColor" />
+            </svg>
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
