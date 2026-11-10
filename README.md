@@ -2,6 +2,9 @@
 
 An aesthetic, editorial-themed React application for sentiment analysis powered by the **KhushiRNN** backend model.
 
+🔗 **Live Website**: [https://lucky-KRMU.github.io/KhushiRNN/](https://lucky-KRMU.github.io/KhushiRNN/)  
+⚙️ **Live Backend API**: [https://khushirnn-backend.onrender.com](https://khushirnn-backend.onrender.com)
+
 ---
 
 ## ✨ Features
